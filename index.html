@@ -1,0 +1,35 @@
+<script>
+    function getMobileOperatingSystem() {
+       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+       if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+       {
+          return 'iOS';
+       }
+       else if( userAgent.match( /Android/i ) )
+       {
+          return 'Android';
+       }
+       else
+       {
+          return 'unknown';
+       }
+    }
+
+    function onLoad(){
+       var urlLink1 = "http://www.instagram.com/lewismcampbell";
+       switch(getMobileOperatingSystem()){
+           case 'Android':
+                urlLink1 = "intent://www.instagram.com/lewismcampbell#Intent;package=com.instagram.android;scheme=https;end";
+                break;
+           case 'iOS':
+                urlLink1 = "instagram://user?username=lewismcampbell";
+                break;
+           default:
+                break;
+        }
+       document.getElementById('yourLink1').setAttribute('href', urlLink1);
+    }
+    window.onload = onLoad;
+    </script>
+    
+    <a id="yourLink1" class="grey-text text-lighten-3" target="_blank">Link1</a>
