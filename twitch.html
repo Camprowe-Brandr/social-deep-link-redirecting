@@ -1,0 +1,33 @@
+<script>
+    function getMobileOperatingSystem() {
+       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+       if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+       {
+          return 'iOS';
+       }
+       else if( userAgent.match( /Android/i ) )
+       {
+          return 'Android';
+       }
+       else
+       {
+          return 'unknown';
+       }
+    }
+
+    function onLoad(){
+       var link = "https://twitch.tv/lewismcampbell";
+       switch(getMobileOperatingSystem()){
+           case 'Android':
+           link = "twitch://stream/lewismcampbell";
+                break;
+           case 'iOS':
+           link = "twitch://stream/lewismcampbell";
+                break;
+           default:
+                break;
+        }
+        window.location.replace(link);
+    }
+    window.onload = onLoad;
+    </script>
