@@ -1,0 +1,23 @@
+{
+  "name": "lewis-campbell-redirect",
+  "version": "1.0.0",
+  "description": "URL shortlinking and redirecting with deep linking built in to go straight to the specific mobile apps if they're installed.",
+  "main": "createLinks.js",
+  "dependencies": {
+    "ghpages": "^0.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Camprowe-Brandr/lewis-campbell-redirect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Camprowe-Brandr/lewis-campbell-redirect/issues"
+  },
+  "homepage": "https://github.com/Camprowe-Brandr/lewis-campbell-redirect#readme"
+}
