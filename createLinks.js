@@ -56,5 +56,7 @@ async function openFile(json) {
   data.forEach(obj => {
       openFile(obj);
   });
+  console.log("Created the new static pages");
   ghpages.publish('public', function(err) {});
+  console.log("Deployed to Github Pages");
 })();
