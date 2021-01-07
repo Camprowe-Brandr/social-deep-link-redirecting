@@ -1,4 +1,5 @@
 const fs = require('fs').promises;
+var ghpages = require('gh-pages');
 let data;
 
 async function readFile() {
@@ -55,4 +56,5 @@ async function openFile(json) {
   data.forEach(obj => {
       openFile(obj);
   });
+  ghpages.publish('public', function(err) {});
 })();
