@@ -1,13 +1,32 @@
 [
-        {
-            "name": "instagram",
-            "question": "Which one is correct team name in NBA?",
-            "answer": "Huston Rocket"
-        },
-        {
-            "name": "twitter",
-            "question": "2Which one is correct team name in NBA?",
-            "answer": "2Huston Rocket"
-        }
-    
+    {
+        "name": "instagram",
+        "normal": "http://www.instagram.com/lewismcampbell",
+        "android": "intent://www.instagram.com/lewismcampbell#Intent;package=com.instagram.android;scheme=https;end",
+        "ios": "instagram://user?username=lewismcampbell"
+    },
+    {
+        "name": "twitter",
+        "normal": "http://www.twitter.com/lewismcampbell",
+        "android": "intent://twitter.com/lewismcampbell#Intent;package=com.twitter.android;scheme=https;end",
+        "ios": "twitter://user?screen_name=lewismcampbell"
+    },
+    {
+        "name": "twitch",
+        "normal": "https://twitch.tv/lewismcampbell",
+        "android": "twitch://stream/lewismcampbell",
+        "ios": "twitch://stream/lewismcampbell"
+    },
+    {
+        "name": "youtube",
+        "normal": "https://www.youtube.com/channel/UCYRHlGLDqAJbe7POuSAtmlA?sub_confirmation=1",
+        "android": "intent://www.youtube.com/channel/UCYRHlGLDqAJbe7POuSAtmlA#Intent;package=com.google.android.youtube;scheme=https;end",
+        "ios": "vnd.youtube://www.youtube.com/channel/UCYRHlGLDqAJbe7POuSAtmlA"
+    },
+    {
+        "name": "Reddit",
+        "normal": "https://reddit.com/u/lewismcampbell",
+        "android": "intent://reddit.com/u/lewismcampbell/#Intent;package=com.reddit.frontpage;scheme=https;end",
+        "ios": "https://reddit.com/u/lewismcampbell"
+    }    
 ]

@@ -16,13 +16,13 @@
     }
 
     function onLoad(){
-       var link = "http://www.instagram.com/lewismcampbell";
+       var link = "https://twitch.tv/lewismcampbell";
        switch(getMobileOperatingSystem()){
            case 'Android':
-           link = "intent://www.instagram.com/lewismcampbell#Intent;package=com.instagram.android;scheme=https;end";
+           link = "twitch://stream/lewismcampbell";
                 break;
            case 'iOS':
-           link = "instagram://user?username=lewismcampbell";
+           link = "twitch://stream/lewismcampbell";
                 break;
            default:
                 break;

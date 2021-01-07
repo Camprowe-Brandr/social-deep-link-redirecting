@@ -16,18 +16,18 @@
     }
 
     function onLoad(){
-       var urlLink1 = "http://www.instagram.com/lewismcampbell";
+       var link = "${json.normal}";
        switch(getMobileOperatingSystem()){
            case 'Android':
-                urlLink1 = "intent://www.instagram.com/lewismcampbell#Intent;package=com.instagram.android;scheme=https;end";
+           link = "${json.android}";
                 break;
            case 'iOS':
-                urlLink1 = "instagram://user?username=lewismcampbell";
+           link = "${json.ios}";
                 break;
            default:
                 break;
         }
-        window.location.replace(urlLink1);
+        window.location.replace(link);
     }
     window.onload = onLoad;
     </script>

@@ -16,13 +16,13 @@
     }
 
     function onLoad(){
-       var link = "http://www.instagram.com/lewismcampbell";
+       var link = "https://www.youtube.com/channel/UCYRHlGLDqAJbe7POuSAtmlA?sub_confirmation=1";
        switch(getMobileOperatingSystem()){
            case 'Android':
-           link = "intent://www.instagram.com/lewismcampbell#Intent;package=com.instagram.android;scheme=https;end";
+           link = "intent://www.youtube.com/channel/UCYRHlGLDqAJbe7POuSAtmlA#Intent;package=com.google.android.youtube;scheme=https;end";
                 break;
            case 'iOS':
-           link = "instagram://user?username=lewismcampbell";
+           link = "vnd.youtube://www.youtube.com/channel/UCYRHlGLDqAJbe7POuSAtmlA";
                 break;
            default:
                 break;

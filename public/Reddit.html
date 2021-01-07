@@ -16,13 +16,13 @@
     }
 
     function onLoad(){
-       var link = "http://www.instagram.com/lewismcampbell";
+       var link = "https://reddit.com/u/lewismcampbell";
        switch(getMobileOperatingSystem()){
            case 'Android':
-           link = "intent://www.instagram.com/lewismcampbell#Intent;package=com.instagram.android;scheme=https;end";
+           link = "intent://reddit.com/u/lewismcampbell/#Intent;package=com.reddit.frontpage;scheme=https;end";
                 break;
            case 'iOS':
-           link = "instagram://user?username=lewismcampbell";
+           link = "https://reddit.com/u/lewismcampbell";
                 break;
            default:
                 break;
