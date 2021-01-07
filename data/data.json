@@ -1,11 +1,13 @@
-[{
-        "instagram": {
+[
+        {
+            "name": "instagram",
             "question": "Which one is correct team name in NBA?",
             "answer": "Huston Rocket"
         },
-        "twitter": {
+        {
+            "name": "twitter",
             "question": "2Which one is correct team name in NBA?",
             "answer": "2Huston Rocket"
         }
     
-}]
+]

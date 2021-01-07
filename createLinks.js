@@ -12,7 +12,7 @@ async function readFile() {
 
 async function openFile(json) {
     try {
-      await fs.writeFile('./public/groceries.csv');
+      await fs.writeFile(`./public/${json.name}.html`, 'name,quantity,price');
     } catch (error) {
       console.error(`Got an error trying to write to a file: ${error.message}`);
     }
@@ -20,9 +20,8 @@ async function openFile(json) {
 
   (async function () {
     await readFile();
-    data.forEach(obj => {
-        console.log(obj);
-        console.log("----------")
+  data.forEach(obj => {
+        openFile(obj);
     });
     //await openFile();
   })();
