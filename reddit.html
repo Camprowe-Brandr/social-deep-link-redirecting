@@ -16,13 +16,13 @@
       }
 
       function onLoad(){
-        var link = "https://twitch.tv/lewismcampbell";
+        var link = "https://reddit.com/u/lewismcampbell";
         switch(getMobileOperatingSystem()){
             case 'Android':
-            link = "twitch://stream/lewismcampbell";
+            link = "intent://reddit.com/u/lewismcampbell/#Intent;package=com.reddit.frontpage;scheme=https;end";
                   break;
             case 'iOS':
-            link = "twitch://stream/lewismcampbell";
+            link = "https://reddit.com/u/lewismcampbell";
                   break;
             default:
                   break;
