@@ -12,42 +12,44 @@ async function readFile() {
 }
 
 async function openFile(json) {
-  try {
-    await fs.writeFile(`./public/${json.name}.html`, `<script>
-    function getMobileOperatingSystem() {
-       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-       if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
-       {
-          return 'iOS';
-       }
-       else if( userAgent.match( /Android/i ) )
-       {
-          return 'Android';
-       }
-       else
-       {
-          return 'unknown';
-       }
-    }
-
-    function onLoad(){
-       var link = "${json.normal}";
-       switch(getMobileOperatingSystem()){
-           case 'Android':
-           link = "${json.android}";
-                break;
-           case 'iOS':
-           link = "${json.ios}";
-                break;
-           default:
-                break;
+  for (const obj of json.name) {
+    try {    
+      await fs.writeFile(`./public/${obj}.html`, `<script>
+      function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+        {
+            return 'iOS';
         }
-        window.location.replace(link);
+        else if( userAgent.match( /Android/i ) )
+        {
+            return 'Android';
+        }
+        else
+        {
+            return 'unknown';
+        }
+      }
+
+      function onLoad(){
+        var link = "${json.normal}";
+        switch(getMobileOperatingSystem()){
+            case 'Android':
+            link = "${json.android}";
+                  break;
+            case 'iOS':
+            link = "${json.ios}";
+                  break;
+            default:
+                  break;
+          }
+          window.location.replace(link);
+      }
+      window.onload = onLoad;
+      </script>`);
+    } catch (error) {
+      console.error(`Got an error trying to write to a file: ${error.message}`);
     }
-    window.onload = onLoad;
-    </script>`);
-  } catch (error) {
-    console.error(`Got an error trying to write to a file: ${error.message}`);
   }
 }
 
